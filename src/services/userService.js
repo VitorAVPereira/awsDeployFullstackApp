@@ -1,10 +1,10 @@
 const { User } = require('../models/user');
-const dbConnection = require('../config/database/database');
+const connectDB = require('../config/database/database');
 
 const UserService = {
     register: async (data) => {
         try {
-            await dbConnection();
+            await connectDB();
             const registerUser = await User.create(data);
             return registerUser;
         } catch (err) {
@@ -13,7 +13,7 @@ const UserService = {
     },
     findByEmail: async (email) => {
         try {
-            await dbConnection();
+            await connectDB();
             const user = await User.findOne({ email });
             return user;
         } catch (err) {

@@ -21,4 +21,4 @@ connectDB().then(() => {
   })
 })
 
-module.exports = dbConnection
+module.exports = connectDB
