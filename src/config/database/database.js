@@ -5,7 +5,7 @@ dotenv.config()
 
 const MONGODB_URL = process.env.MONGODB_URL
 const URI = MONGODB_URL
-const PORT = process.env.PORT || 4555
+const PORT = process.env.PORT
 
 const connectDB = async () => {
   try {

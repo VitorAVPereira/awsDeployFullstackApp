@@ -1,4 +1,4 @@
 const express = require('express');
-const port = 4555
+const port = process.env.PORT
 
 module.exports = { app: express(), express: express, port, router: express.Router() };

@@ -7,6 +7,6 @@ app.use(express.json())
 app.use(bodyParser.json())
 app.use(cors());
 app.use('/auth', userRoutes)
-app.listen(process.env.PORT || port, () => {
-  console.log(`Aplicação na porta: ${port}`)
+app.listen(process.env.PORT, () => {
+  console.log(`Aplicação na porta: ${process.env.PORT}`)
 })
