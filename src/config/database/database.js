@@ -5,7 +5,7 @@ dotenv.config()
 
 const MONGODB_URL = process.env.MONGODB_URL
 const URI = MONGODB_URL
-const PORT = process.env.PORT
+
 
 const connectDB = async () => {
   try {
@@ -16,10 +16,5 @@ const connectDB = async () => {
     process.exit(1);
   }
 }
-connectDB().then(() => {
-  app.listen(PORT, () => {
-      console.log("listening for requests");
-  })
-})
 
 module.exports = connectDB
